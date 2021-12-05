@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Hotel Reservation</title>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Hotel Booking Site</h1>
+        <div id="login-page">
+            <button id="logout-btn" class="invisible">Logout</button>
+            <button id="login-btn">Login</button>
+            <button id="signup-btn">Sign up</button>
+        </div>
+    </header>
+
+    <div id="modal-login" class="modal invisible">
+        <div id="modal-content">
+            <section>
+                <h2>Username</h2>
+                <input type="text" id="user-login">
+            </section>
+            <section>
+                <h2>Password</h2>
+                <input type="password" id="pass-login">
+            </section>
+            <footer id="btn-footer">
+                <button id="signin-btn">Sign in</button>
+                <button id="cancel-btn">Cancel</button>
+            </footer>
+        </div>
+    </div>
+
+    <div id="modal-signup" class="modal invisible">
+        <div id="modal-content">
+            <section>
+                <h2>Username</h2>
+                <input type="text" id="user-signup">
+            </section>
+            <section>
+                <h2>Password</h2>
+                <input type="password" id="pass-signup">
+            </section>
+            <footer id="btn-footer">
+                <button id="register-btn">Register</button>
+                <button id="cancel2-btn">Cancel</button>
+            </footer>
+        </div>
+    </div>
+
+    <div id="reserve-room" class="invisible">
+        <h2 id="welcome-msg">Welcome</h2>
+        <img src="img/room.jpg" alt="Hotel Room" width="460" height="345">
+        <div>
+            <p>From <b style="font-size:x-large;">100</b> USD / night</p>
+            <p>
+                Check-in date:<input type="date" id="checkin" min=date.>
+            </p>
+            <p>
+                Check-out date:<input type="date" id="checkout" disabled>
+            </p>
+            <h3 id="price-msg">Price: $0</h3>
+            <p>No online payments accepted, please pay during check in</p>
+            <button id="reserve-btn" disabled>Reserve</button>
+            <button id="check-btn">Check Bookings</button>
+        </div>
+    </div>
+
+    <div id="itinerary" class="invisible">
+        <h2 id="reservation-msg">Hi there, here is your bookings:</h2>
+        <div>
+            <p id="confirmation-msg">Confirmation Number: #</p>
+            <button id="return-btn">Return to Booking</button>
+        </div>
+    </div>
+
+    <script src="js/scripts.js" charset="utf-8"></script>
+</body>
+
+</html>
